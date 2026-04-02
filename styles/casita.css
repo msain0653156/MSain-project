@@ -630,13 +630,7 @@ tbody tr td:first-child {
     font-weight: bold; /* make the feature name bold */
 }
 
-/* Optional: Add a small icon next to feature names for visual appeal */
-td:first-child::before {
-    content: "\1F4B0"; /* Dollar icon */
-    margin-right: 10px;
-}
 
-/* Responsive Design for table */
 @media (max-width: 768px) {
     table {
         font-size: 1em; /* adjust font size for small screens */
@@ -646,16 +640,16 @@ td:first-child::before {
         padding: 10px; /* less padding for smaller screens */
     }
 }
-/* Styling for the entire table */
+
 table {
-    width: 100%; /* Ensure the table takes full width */
-    border-collapse: collapse; /* Ensures no spacing between borders */
+    width: 100%; /*  the table takes full width */
+    border-collapse: collapse; /*  no spacing between borders */
     background-color: #ffffff; /* White background for the table */
     color: #333; /* Dark text color for table content */
-    font-family: 'Arial', sans-serif; /* Clean, readable font */
+    font-family: 'Arial', sans-serif; /* font */
 }
 
-/* Table Header Styling */
+
 th {
     /* background-color: #f4a261; /* Orange background for header */
     color: #6f4e37; 
@@ -664,50 +658,50 @@ th {
     font-weight: bold;
 }
 #canyon-main {
-    background-color: rgba(255, 255, 255, 0.85); /* Slightly more opaque for better readability */
+    background-color: rgba(255, 255, 255, 0.85); 
     padding: 40px;
     margin-top: 20px;
-    border-radius: 15px; /* Slightly more rounded corners */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft, deeper shadow for more depth */
-    backdrop-filter: blur(10px); /* Adding a soft blur for a more cozy feel */
+    border-radius: 15px; /*  rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* shadow */
+    backdrop-filter: blur(10px); 
 }
 
 #canyon-room-title {
-    font-size: 2.8em; /* Slightly larger for emphasis */
-    color: #5d3f1f; /* A darker, rich brown for the title */
+    font-size: 2.8em; /* larger*/
+    color: #5d3f1f; /* title */
     text-align: center;
     font-weight: bold;
-    margin-bottom: 25px; /* Increased space below title */
-    text-transform: uppercase; /* Adds a more formal touch */
-    letter-spacing: 1.5px; /* Subtle letter spacing for elegance */
+    margin-bottom: 25px; /* space below title */
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; /* spacing */
 }
 
 #canyon-room-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    font-family: 'Georgia', serif; /* Rustic font for the room details */
+    font-family: 'Georgia', serif; /* font for the room details */
 }
 
 #canyon-room-item {
     display: flex;
-    flex-direction: column; /* Stacks the image and details vertically */
+    flex-direction: column; 
     align-items: center; /* Centers everything */
-    margin-bottom: 30px; /* More space between room items */
+    margin-bottom: 30px; /* space between room items */
     padding: 20px;
-    background-color: rgba(245, 226, 186, 0.8); /* Light warm background for each item */
+    background-color: rgba(245, 226, 186, 0.8); /* warm background */
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); /* Slightly deeper shadow */
-    text-align: center; /* Centers the content of each room item */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); /*  shadow */
+    text-align: center; /* Centers each room item */
 }
 
 #canyon-room-img {
-    width: 300px; /* Increased image width */
-    height: 225px; /* Increased image height */
-    border-radius: 8px; /* Rounded corners for the image */
+    width: 300px; /*  image width */
+    height: 225px; /* image height */
+    border-radius: 8px; /* Rounded corners for  image */
     margin-bottom: 20px; /* Space below the image */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* More prominent shadow around image */
-    object-fit: cover; /* Ensures image fits well inside the box */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* shadow around image */
+    object-fit: cover; /*image fits  */
 }
 
 #canyon-room-details {
@@ -718,11 +712,11 @@ th {
 }
 
 #canyon-room-description {
-    font-size: 1.1em; /* Slightly larger for better readability */
-    color: #6f3f41; /* Matches the rustic feel */
-    line-height: 1.6; /* More space between lines for readability */
+    font-size: 1.1em; /* Slightly larger  */
+    color: #6f3f41; 
+    line-height: 1.6; /* More space between lines */
     margin-top: 10px;
-    max-width: 80%; /* Ensures description doesn’t stretch too wide */
+    max-width: 80%; 
     margin-bottom: 10px; /* Space below description */
     text-align: center;
     margin-left: auto; 
@@ -741,3 +735,50 @@ th {
     text-transform: uppercase; /* Adds a formal feel to the footer text */
 }
 
+
+
+#estimate-page {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#estimate-form {
+    margin-top: 20px;
+}
+
+#estimate-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#estimate-form select,
+#estimate-form input[type="number"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#estimate-form input[type="button"] {
+    background-color: #f4a261;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#estimate-form input[type="button"]:hover {
+    background-color: #e76f51;
+}
+
+#result {
+    margin-top: 25px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #b35726;
+}
