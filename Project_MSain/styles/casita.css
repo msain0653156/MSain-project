@@ -1,0 +1,784 @@
+header, nav, main, footer { 
+    display: block; 
+}
+
+main img { 
+    float: right; /* positions the image to the right side */
+    padding: 20px; /* adjusts spacing */
+}
+
+html, body {
+    height: 100%; /* sets full height */
+    margin: 0; /* removes margin */
+    padding: 0; /* removes padding */
+}
+
+body {	
+    font-family: Verdana, Arial, sans-serif; /* font choices */
+    position: relative; /* allows for precise positioning */
+    background-image: linear-gradient(red, yellow); /* gradient background */
+}
+
+body::before { /* blurred background image */
+    content: ""; /* no actual content */
+    position: fixed; /* stays in place */
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(../images/canyonpic.jpg); /* canyon image */
+    background-size: cover; /* covers the whole area */
+    background-position: center center; /* centers the image */
+    background-repeat: no-repeat; /* prevents repetition */
+    filter: blur(7px); /* adds blur */
+    z-index: -1; /* places it behind content */
+}
+
+#wrapper { 
+    width: 960px; /* centers and sets max width */
+    margin: auto; /* auto-centers */
+    background-color: transparent; /* no background color */
+}
+
+header {
+    background: none; /* ensures there is no background */
+    color: #b35726; /* changes header color */
+    text-align: center; /* aligns it to the center */
+    padding: 40px 20px; /* adds padding to the header */
+	font-size: 40px; /* sets the font size */
+	text-transform: uppercase; /* makes the text uppercase */
+}
+
+header h1 {
+    font-size: 2.5em; /* changes font size */
+    margin: 0; /*sets margin */
+}
+
+header p {
+    font-size: 1.2em; /* changes font size */
+    margin: 10px 0 0; /* changes margin */
+}
+/* Styling for the title link */
+#title-link {
+    text-decoration: none; /* removes underline */
+    color: #e67c20; /* changes title color */
+    font-weight: bold; /* makes it bold */
+    font-family: 'Lora', serif; /* changes font */
+    letter-spacing: 2px; /* adds spacing between characters */
+    text-transform: uppercase; /* makes the title all caps */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* adds a shadow */
+    transition: transform 0.3s ease, color 0.3s ease; /* transitions */
+}
+
+/*removes underline from the title */
+#title-link a {
+	text-decoration: none; /* removes underliner */
+}
+#title-link a:hover {
+	text-decoration: none; /* removes underline from the hover */
+}
+
+#title-link:hover {
+    transform: scale(1.1); /* zoom on hover */
+    color: #fff; /* changes color to white when you hover */
+}
+
+header {
+    text-align: center; /* centers the header */
+    margin: 40px 0; /* adds margin */
+}
+
+header h1 {
+    margin: 0; /* no margin */
+    padding: 0; /* no padding */
+}
+
+nav {
+    padding: 10px 0; /* Add balanced padding for top and bottom */
+    margin-top: -40px; /* Adjust upward positioning slightly */
+    margin-bottom: 20px; /* Decrease bottom margin for tighter spacing */
+    width: 100%; /* Full width */
+    background-color: #ffffcc; /* Light yellow for nav */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the navigation items */
+    border-radius: 20px; /* Round corners */
+    text-transform: uppercase; /* Keep text uppercase */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center the nav items */
+    gap: 80px; /* Add consistent spacing between nav items */
+}
+
+nav li {
+    font-weight: bold; /* Bold text */
+    padding: 10px 15px; /* Adjust padding for balance */
+    text-align: center; /* Center text */
+}
+
+nav a { 
+    text-decoration: none; /* Remove underline */
+    color: #c1621f; /* Primary color for links */
+    display: block; /* Ensure clickable area is block-level */
+    transition: color 0.3s ease, transform 0.2s; /* Add smooth transitions */
+}
+
+nav a:link { color: #6f3f41; } /* Default link color */
+nav a:visited { color: #4d2c3e; } /* Visited link color */
+nav a:hover { 
+    color: #d35a31; 
+    text-decoration: none; 
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+
+main { 
+	border-top: #b65b34;
+    background-color: rgba(255, 255, 204, 0.9); /* slight transparency */
+    margin-top: 20px; /* adds space above */
+    padding: 20px; /* adds padding to the main content */
+    min-height: 500px; /* minimum height of main content */
+    color: #6f3f41; /* changes color */
+    border-radius: 10px; /* rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif; /* fonts used */
+    font-size: 4.5em; /* font size */
+    text-align: center; /* text alignment */
+}
+
+h2 {
+    font-size: 2em; /* font size */
+    color: #6f4e37; /* earthy brown */
+    font-weight: bold; /* changes it to bold */
+    text-align: left; /* aligns the text to the left */
+    margin-top: 20px; /* margin for above the title */
+}
+
+ul {
+    padding-left: 20px; /* adds padding to the left */
+    margin: 10px 0; /* margin for the list */
+}
+
+ul li {
+    margin-bottom: 10px; /* adds space below */
+}
+
+ul li strong {
+    color: #6f4e37; /* changes color */
+}
+
+a {
+    color: #f4a261; /* changes color */
+    text-decoration: none; /* ensures there is no underline */
+}
+
+a:hover {
+    color: #e76f51; /* changes color */
+}
+
+a.cta {
+    display: inline-block; /* makes it fall inline */
+    margin-top: 20px; /* margin above the button */
+    padding: 10px 20px; /* adds padding */
+    background-color: #f4a261; /* changes the background color */
+    color: white; /* changes color */
+    text-decoration: none; /* removes underline */
+    font-weight: bold; /* changes font weight */
+    border-radius: 5px; /*  adds rounded corners */
+    text-align: center; /* aligns the text in the center */
+}
+
+a.cta:hover {
+    background-color: #e76f51; /* changes hover color */
+    transition: background-color 0.3s; /* transition */
+}
+/* weekend events */
+#weekend-events {
+    font-family: 'Verdana', sans-serif; /* fonts used */
+    margin: 40px auto; /* centers it */
+    padding: 20px; /* adds padding */
+    max-width: 960px; /* sets the width max */
+    background-color: rgba(255, 255, 255, 0.8); /* transparency for background */
+    border-radius: 10px; /* rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* shadow */
+}
+
+#weekend-events h2 {
+    text-align: center; /*centers the text */
+    font-size: 2.5em; /* size of the font */
+    color: #6f3f41; /* changes color */
+    font-weight: bold; /* makes it bold */
+    margin-bottom: 20px; /* adds spacing */
+}
+
+#weekend-events p {
+    text-align: center; /* centers text */
+    font-size: 1.2em; /* changes font size */
+    margin-bottom: 30px; /* adds spacing */
+    color: #6f3f41; /* changes color */
+}
+
+/* event days styling */
+.event-day {
+    margin-bottom: 40px; /* adds spacing */
+}
+
+.event-day h3 {
+    font-size: 2em; /* changes font size */
+    color: #c1621f; /* changes color */
+    font-weight: bold; /* makes it bold */
+    margin-bottom: 15px; /* adds spacing to the bottomg */
+    text-align: left; /* aligns the text to the left */
+    text-transform: uppercase; /* changes it to uppercase */
+    letter-spacing: 2px; /* adds spacing between letters */
+}
+
+.event-day ul {
+    list-style-type: none; /* removes list style */
+    margin: 0; /* removes margin */
+    padding: 0; /* removes padding */
+}
+
+.event-day li {
+    background-color: #f4f1e1; /* background for events */
+    padding: 15px; /* adds padding */
+    margin-bottom: 15px; /* spacing for bottom */
+    border-radius: 5px; /* rounded corner */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* adds shadow */
+}
+
+.event-day li strong {
+    font-size: 1.3em; /* font size */
+    color: #c1621f; /* changes event names color */
+}
+
+.event-day li em {
+    display: block; /* inline block */
+    margin-top: 10px; /*spacing for the top */
+    font-style: italic; /* changes to italic */
+    font-size: 1em; /* changes font size */
+    color: #6f3f41; /* changes color */
+}
+
+.book-now {
+    background-color: #f4a261; /* changes color */
+    padding: 20px; /* adds padding */
+    text-align: center; /* aligns the text in the center */
+    margin-top: 40px; /* spacing to the top */
+    border-radius: 8px; /* rounded edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* adds shadow */
+}
+
+.book-now p {
+    color: white; /* changes color */
+    font-size: 1.2em; /* changes font size */
+    font-weight: bold; /* makes bold */
+    margin: 0; /* removes margin */
+}
+
+.book-now strong {
+    color: #ffffff; /* changes color */
+    font-size: 1.3em; /* changes font size */
+}
+
+.event-day li:hover {
+    background-color: #e1d9c6; /* background on hover */
+    transform: translateY(-5px); /* adds transition */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* zoom in hover */
+}
+
+a {
+    color: #6f3f41; /* changes color */
+    text-decoration: none; /* removes decorations */
+}
+
+a:hover {
+    color: #c1621f; /* changes color */
+    text-decoration: underline; /* adds underline */
+}
+
+
+footer {
+	background-image: none; /* no background image */
+    padding: 20px; /* adds padding */
+    text-align: center; /* aligns to center */
+    font-size: small; /* changes font size */
+    font-style: italic; /* changes to italic */
+}
+@keyframes fadeIn { /* adds transition */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+header, nav, main, footer {
+    animation: fadeIn 2s ease-in-out; /* fade-in animation */
+}
+
+/* Styling for the main content */
+.homepage-main {
+    max-width: 1200px; /* ensures the main content is responsive */
+    margin: 20px auto; /* centers the content */
+    padding: 20px; /* padding around the content */
+    background-color: rgba(255, 255, 255, 0.8); /* slightly transparent background */
+    border-radius: 10px; /* rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+.homepage-main h2 {
+    font-size: 2.5em; /* larger font size for subtitle */
+    color: #b35726; /* matches header color */
+    text-align: center; /* center align */
+    margin-bottom: 20px; /* adds space below */
+}
+
+.homepage-main h3 {
+    font-size: 1.8em; /* medium-sized heading */
+    color: #6f4e37; /* earthy brown */
+    margin-top: 30px; /* spacing above */
+}
+
+.homepage-main p {
+    font-size: 1.2em; /* readable font size */
+    line-height: 1.6; /* improves readability */
+    color: #6f3f41; /* earthy color */
+}
+
+/* Hover effect for links in the main content */
+.homepage-main a:hover {
+    color: #e76f51; /* changes color on hover */
+    text-decoration: underline; /* underline on hover */
+}
+
+/* Button styling */
+a.cta {
+    display: inline-block; /* aligns the button inline */
+    margin-top: 30px; /* space from previous content */
+    padding: 15px 30px; /* bigger padding for the button */
+    background-color: #f4a261; /* warm button color */
+    color: white; /* text color */
+    text-decoration: none; /* no underline */
+    font-weight: bold; /* makes it bold */
+    border-radius: 5px; /* rounded corners */
+    text-align: center; /* centers the button text */
+    transition: background-color 0.3s, transform 0.3s; /* smooth transitions */
+}
+
+a.cta:hover {
+    background-color: #e76f51; /* darker button on hover */
+    transform: translateY(-3px); /* slight raise effect */
+}
+
+/* Responsive Design - mobile-friendly */
+@media (max-width: 768px) {
+    /* Main content styling */
+    .homepage-main {
+        padding: 15px; /* less padding */
+        margin: 10px; /* smaller margin */
+    }
+
+    /* Smaller font sizes for headings on mobile */
+    .homepage-main h2 {
+        font-size: 2em; /* smaller subtitle */
+    }
+
+    .homepage-main h3 {
+        font-size: 1.5em; /* smaller heading */
+    }
+
+    .homepage-main p {
+        font-size: 1em; /* smaller paragraph text */
+    }
+
+    /* Stack navigation items vertically on mobile */
+    nav ul {
+        flex-direction: column; /* stack links */
+        align-items: center; /* centers the items */
+    }
+
+    /* Adjust navigation link styling */
+    nav li {
+        padding: 10px; /* reduce padding */
+    }
+}
+
+/* Add a subtle fade effect for content in homepage */
+.homepage-main {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+
+/* Footer links hover effect */
+footer a:hover {
+    color: #e76f51; /* changes footer link color */
+    text-decoration: underline; /* adds underline */
+}
+/* Specific styles for the Contact Page */
+#contact-page {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for contact page */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px; /* Spacing from top */
+    color: #6f3f41; /* Text color */
+}
+
+/* Styling for the contact form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between form elements */
+    font-size: 1.1em;
+}
+
+#contact-form label {
+    font-weight: bold;
+    color: #6f3f41; /* Text color for labels */
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width for form fields */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+#contact-form textarea {
+    resize: vertical; /* Allows resizing vertically */
+}
+
+/* Submit button style */
+#contact-form input[type="submit"] {
+    background-color: #f4a261; /* Button color */
+    color: white; /* Button text color */
+    font-weight: bold;
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px 20px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#contact-form input[type="submit"]:hover {
+    background-color: #e76f51; /* Darker color on hover */
+}
+
+/* Contact Information section */
+#contact-info {
+    list-style-type: none; /* No list styling */
+    padding: 0;
+    margin-top: 20px;
+}
+
+#contact-info li {
+    font-size: 1.2em;
+    margin-bottom: 10px; /* Space between items */
+}
+
+#contact-info li strong {
+    color: #b35726; /* Highlighted color for the labels */
+}
+
+#contact-info li a {
+    color: #f4a261; /* Link color */
+    text-decoration: none; /* Removes underline */
+}
+
+#contact-info li a:hover {
+    color: #e76f51; /* Link hover color */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    #contact-page {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    #contact-form {
+        font-size: 1em; /* Smaller font for smaller screens */
+    }
+
+    #contact-form input, #contact-form textarea {
+        font-size: 1em; /* Adjust input field size */
+    }
+}
+
+/* Additional Styles for the Table */
+table {
+    width: 100%; /* Ensures the table spans the width of the container */
+    border-collapse: collapse; /* Collapses table borders for a cleaner look */
+    margin-top: 30px; /* Adds space above the table */
+}
+
+th, td {
+    padding: 15px; /* Adds space around table content */
+    text-align: center; /* Centers the text in each cell */
+    border: 1px solid #b35726; /* Adds a border with the same color as the header */
+}
+
+th {
+    /* background-color: #f4a261; /* Light orange background for headers */
+    /* color: white; /* White text for header */
+    font-size: 1.2em; /* Larger font for the header */
+    text-transform: uppercase; /* Uppercase text for headers */
+}
+
+td {
+    background-color: #ffffff; /* White background for table cells */
+    color: #6f4e37; /* Earthy brown text color for table content */
+    font-size: 1.1em; /* Slightly larger font size for readability */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Slight gray background for even rows */
+}
+
+tbody tr:hover {
+    background-color: #f4a261; /* Highlight rows on hover with a light orange */
+    /* color: white; /* Change text color to white on hover */
+    cursor: pointer; /* Changes the cursor to a pointer */
+}
+
+/* Adding spacing and styling for the room comparison title */
+h2 {
+    font-size: 2.5em; /* Increase font size for better visibility */
+    text-align: center; /* Center-align the title */
+    color: #6f3f41; /* Earthy brown color */
+    margin-top: 20px; /* Adds spacing above the title */
+    margin-bottom: 20px; /* Adds spacing below the title */
+}
+
+/* Adding padding and alignment to the main content */
+main {
+    padding: 20px; /* Adds padding to the main content */
+    background-color: rgba(255, 255, 204, 0.9); /* Slight transparency for background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow around the content */
+    margin-top: 30px; /* Adds spacing from the top */
+    color: #6f3f41; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Mobile responsiveness for table */
+@media (max-width: 768px) {
+    table {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    th, td {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Adds space between rows */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    border-radius: 10px; /* rounded corners */
+}
+
+th, td {
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 1.2em;
+    border: 1px solid #ddd; /* light border */
+    border-radius: 8px;
+}
+
+th {
+    /* background-color: #f4a261; /* warm background color */
+    /* color: white; /* white text */
+    text-transform: uppercase; /* makes header text uppercase */
+    font-weight: bold;
+}
+
+tbody tr {
+    background-color: #f4f1e1; /* light background for the rows */
+    transition: background-color 0.3s ease; /* smooth transition for hover */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff; /* white background for odd rows */
+}
+
+tbody tr:hover {
+    background-color: #e1d9c6; /* background color on hover */
+}
+
+td {
+    color: #6f3f41; /* text color */
+}
+
+td:nth-child(2), td:nth-child(3) {
+    text-align: center; /* center-align the values */
+}
+
+tbody tr td:first-child {
+    font-weight: bold; /* make the feature name bold */
+}
+
+
+@media (max-width: 768px) {
+    table {
+        font-size: 1em; /* adjust font size for small screens */
+    }
+
+    th, td {
+        padding: 10px; /* less padding for smaller screens */
+    }
+}
+
+table {
+    width: 100%; /*  the table takes full width */
+    border-collapse: collapse; /*  no spacing between borders */
+    background-color: #ffffff; /* White background for the table */
+    color: #333; /* Dark text color for table content */
+    font-family: 'Arial', sans-serif; /* font */
+}
+
+
+th {
+    /* background-color: #f4a261; /* Orange background for header */
+    color: #6f4e37; 
+    text-align: left;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+#canyon-main {
+    background-color: rgba(255, 255, 255, 0.85); 
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 15px; /*  rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* shadow */
+    backdrop-filter: blur(10px); 
+}
+
+#canyon-room-title {
+    font-size: 2.8em; /* larger*/
+    color: #5d3f1f; /* title */
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 25px; /* space below title */
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; /* spacing */
+}
+
+#canyon-room-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif; /* font for the room details */
+}
+
+#canyon-room-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Centers everything */
+    margin-bottom: 30px; /* space between room items */
+    padding: 20px;
+    background-color: rgba(245, 226, 186, 0.8); /* warm background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); /*  shadow */
+    text-align: center; /* Centers each room item */
+}
+
+#canyon-room-img {
+    width: 300px; /*  image width */
+    height: 225px; /* image height */
+    border-radius: 8px; /* Rounded corners for  image */
+    margin-bottom: 20px; /* Space below the image */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* shadow around image */
+    object-fit: cover; /*image fits  */
+}
+
+#canyon-room-details {
+    font-size: 1.3em; /* Slightly larger for pricing emphasis */
+    color: #c1621f; /* Accent color for price */
+    font-weight: bold;
+    margin-bottom: 15px; /* Space below price */
+}
+
+#canyon-room-description {
+    font-size: 1.1em; /* Slightly larger  */
+    color: #6f3f41; 
+    line-height: 1.6; /* More space between lines */
+    margin-top: 10px;
+    max-width: 80%; 
+    margin-bottom: 10px; /* Space below description */
+    text-align: center;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+#canyon-footer {
+    text-align: center;
+    padding: 25px;
+    color: black;
+    margin-top: 30px; /* Increased margin between footer and content */
+}
+
+#canyon-footer p {
+    margin: 0;
+    text-transform: uppercase; /* Adds a formal feel to the footer text */
+}
+
+
+
+#estimate-page {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#estimate-form {
+    margin-top: 20px;
+}
+
+#estimate-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#estimate-form select,
+#estimate-form input[type="number"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#estimate-form input[type="button"] {
+    background-color: #f4a261;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#estimate-form input[type="button"]:hover {
+    background-color: #e76f51;
+}
+
+#result {
+    margin-top: 25px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #b35726;
+}
