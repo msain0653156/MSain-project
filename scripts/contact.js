@@ -1,4 +1,4 @@
-// Data arrays for the review section.
+// data for review section.
 var reviewers = ["Ava", "Noah", "Mia"];
 var reviewDates = ["4/1/2026", "4/5/2026", "4/7/2026"];
 var reviewRatings = [5, 4, 5];
@@ -13,7 +13,6 @@ var reviewTexts = [
     "Perfect place for a weekend getaway. The breakfast was delicious and the bed was very comfortable."
 ];
 
-// Create a string of stars for the rating.
 function starText(rating) {
     var stars = "";
     for (var i = 1; i <= rating; i++) {
@@ -22,7 +21,6 @@ function starText(rating) {
     return stars;
 }
 
-// Build the HTML for the review list.
 function showReviews() {
     var reviewSection = document.getElementById('review-list');
     var reviewCode = "";
@@ -39,7 +37,6 @@ function showReviews() {
     reviewSection.innerHTML = reviewCode;
 }
 
-// Run when the page is loaded.
 window.onload = function() {
     showReviews();
 };
