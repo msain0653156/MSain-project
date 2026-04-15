@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Neon Nexus Retreat - Cost Estimator</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="styles/casita.css" rel="stylesheet">
+<script src="scripts/estimate.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <h1 id="title-link"><a href="index.html">Neon Nexus Retreat</a></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="rooms/rooms-comparison.html">Room Comparison</a></li>
+            <li><a href="events/weekend.html">Weekend Events</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="estimate.html">Cost Estimator</a></li>
+        </ul>
+    </nav>
+
+    <main id="estimate-page">
+        <h2>Estimation of Costs</h2>
+        <p>Use this page to estimate the cost of your stay at Neon Nexus Retreat.</p>
+
+        <!-- lets user choose room -->
+        <form id="estimate-form">
+            <label for="room">Choose a room:</label>
+            <select id="room">
+                <option value="150">Neon Loft - $150 per night</option>
+                <option value="200">Pulse Chamber - $200 per night</option>
+                <option value="250">Quantum Suite - $250 per night</option>
+            </select>
+
+            <label for="nights">Number of nights:</label>
+            <input type="number" id="nights" min="1" value="1">
+
+            <p><strong>Select add-on features:</strong></p>
+
+            <!-- make checkboxes for specific things -->
+            <label class="feature-option">Neon Breakfast Experience (+$20)<input type="checkbox" id="breakfast"></label>
+            <label class="feature-option">Priority Parking Pass (+$15)<input type="checkbox" id="parking"></label>
+            <label class="feature-option">Night Spa Access (+$50)<input type="checkbox" id="spa"></label>
+            <label class="feature-option">Neon City Tour (+$40)<input type="checkbox" id="tour"></label>
+
+            <br>
+            <input type="button" value="Calculate Total" onclick="calculateTotal()">
+        </form>
+
+        <!-- where the total cost will be -->
+        <p id="result"></p>
+    </main>
+</div>
+</body>
+</html>
