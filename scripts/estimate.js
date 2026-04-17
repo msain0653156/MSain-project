@@ -9,15 +9,12 @@ function calculateTotal() {
     // changes nights to an int
     nights = parseInt(nights);
 
-    // Start the total with room price times number of nights.
     var total = room * nights;
 
-    // Add the cost of breakfast if it is checked.
     if (document.getElementById("breakfast").checked) {
         total = total + 20;
     }
 
-    // Add the cost of parking if it is checked.
     if (document.getElementById("parking").checked) {
         total = total + 15;
     }
@@ -32,7 +29,6 @@ function calculateTotal() {
         total = total + 40;
     }
 
-    // Calculate 10% tax.
     var tax = total * 0.10;
 
     // Add tax to the final total.

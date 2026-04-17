@@ -1,4 +1,4 @@
-// data for review section.
+
 var reviewers = ["Ava", "Noah", "Mia"];
 var reviewDates = ["4/1/2026", "4/5/2026", "4/7/2026"];
 var reviewRatings = [5, 4, 5];
