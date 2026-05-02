@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Neon Nexus Retreat - Online Store</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="styles/casita.css" rel="stylesheet">
+<style>
+    @keyframes slideIn {
+        from {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+    }
+</style>
+<script defer src="scripts/store.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <h1 id="title-link"><a href="index.html">Neon Nexus Retreat</a></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="rooms/rooms-comparison.html">Room Comparison</a></li>
+            <li><a href="events/weekend.html">Weekend Events</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="estimate.html">Cost Estimator</a></li>
+            <li><a href="store.html">Store</a></li>
+        </ul>
+    </nav>
+    <main id="store-main">
+        <h2>Neon Nexus Online Store</h2>
+        <p>Enhance your stay with our premium services and amenities. Add these to your cart and complete your booking.</p>
+
+        <div id="products">
+            <div class="product">
+                <img src="images/pulse-chamber.jpg" alt="Pulse Chamber Room" width="300" height="200">
+                <h3>Pulse Chamber</h3>
+                <p>Experience a sleek, atmospheric suite with glowing city views. Includes queen bed, ambient lighting, and private balcony.</p>
+                <p class="price">$200 per night</p>
+                <div style="margin-bottom: 12px;">
+                    <label for="pulse-chamber-nights" style="margin-right: 8px;">Number of Nights:</label>
+                    <select id="pulse-chamber-nights" style="padding: 6px; width: 80px;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <button class="add-to-cart" data-product="Pulse Chamber" data-price="200" data-nights-selector="pulse-chamber-nights">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="images/neon-loft.jpg" alt="Neon Loft" width="300" height="200">
+                <h3>Neon Loft</h3>
+                <p>Modern loft-style accommodation with stunning city views, contemporary design, and all the comforts of home in a neon-lit setting.</p>
+                <p class="price">$150 per night</p>
+                <div style="margin-bottom: 12px;">
+                    <label for="neon-loft-nights" style="margin-right: 8px;">Number of Nights:</label>
+                    <select id="neon-loft-nights" style="padding: 6px; width: 80px;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <button class="add-to-cart" data-product="Neon Loft" data-price="150" data-nights-selector="neon-loft-nights">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="images/neon-breakfast.jpg" alt="Neon Breakfast Experience" width="300" height="200">
+                <h3>Neon Breakfast Experience</h3>
+                <p>Start your day with our signature neon-themed breakfast featuring fresh pastries, gourmet coffee, and city views.</p>
+                <p class="price">$25 per person</p>
+                <div style="margin-bottom: 12px;">
+                    <label for="breakfast-quantity" style="margin-right: 8px;">Number of People:</label>
+                    <select id="breakfast-quantity" style="padding: 6px; width: 80px;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <button class="add-to-cart" data-product="Neon Breakfast Experience" data-price="25" data-nights-selector="breakfast-quantity">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="images/spa-access.jpg" alt="Night Spa Access" width="300" height="200">
+                <h3>Night Spa Access</h3>
+                <p>Relax in our rooftop spa with neon-lit pools, massage treatments, and rejuvenating therapies available after dark.</p>
+                <p class="price">$75 per session</p>
+                <div style="margin-bottom: 12px;">
+                    <label for="spa-quantity" style="margin-right: 8px;">Number of Sessions:</label>
+                    <select id="spa-quantity" style="padding: 6px; width: 80px;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <button class="add-to-cart" data-product="Night Spa Access" data-price="75" data-nights-selector="spa-quantity">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="images/city-tour.jpg" alt="Neon City Tour" width="300" height="200">
+                <h3>Neon City Tour</h3>
+                <p>Guided tour of the city's most vibrant neon districts, including hidden gems and local hotspots.</p>
+                <p class="price">$50 per person</p>
+                <div style="margin-bottom: 12px;">
+                    <label for="tour-quantity" style="margin-right: 8px;">Number of People:</label>
+                    <select id="tour-quantity" style="padding: 6px; width: 80px;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <button class="add-to-cart" data-product="Neon City Tour" data-price="50" data-nights-selector="tour-quantity">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="images/parking-pass.jpg" alt="Priority Parking Pass" width="300" height="200">
+                <h3>Priority Parking Pass</h3>
+                <p>Convenient underground parking with priority access and security monitoring for your vehicle.</p>
+                <p class="price">$20 per day</p>
+                <div style="margin-bottom: 12px;">
+                    <label for="parking-quantity" style="margin-right: 8px;">Number of Days:</label>
+                    <select id="parking-quantity" style="padding: 6px; width: 80px;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <button class="add-to-cart" data-product="Priority Parking Pass" data-price="20" data-nights-selector="parking-quantity">Add to Cart</button>
+            </div>
+        </div>
+
+        <div id="cart-summary">
+            <h3>Your Cart</h3>
+            <div id="cart-items"></div>
+            <p id="cart-total">Total: $0.00</p>
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </main>
+</div>
+</body>
+</html>

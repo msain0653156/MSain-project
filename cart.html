@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Neon Nexus Retreat - Shopping Cart</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="styles/casita.css" rel="stylesheet">
+<script defer src="scripts/cart.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <h1 id="title-link"><a href="index.html">Neon Nexus Retreat</a></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="rooms/rooms-comparison.html">Room Comparison</a></li>
+            <li><a href="events/weekend.html">Weekend Events</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="estimate.html">Cost Estimator</a></li>
+            <li><a href="store.html">Store</a></li>
+        </ul>
+    </nav>
+    <main id="cart-main" style="padding: 24px; margin-bottom: 24px;">
+        <h2>Shopping Cart</h2>
+
+        <div id="cart-container" style="display: flex; gap: 32px; flex-wrap: wrap;">
+            <div id="cart-display" style="flex: 1; min-width: 300px;">
+                <h3>Your Selected Items</h3>
+                <div id="cart-items-display"></div>
+                <p id="cart-total-display" style="font-weight: bold; color: #ffd8ff; font-size: 1.2rem; margin-top: 16px;">Total: $0.00</p>
+            </div>
+
+            <div id="customer-info" style="flex: 1; min-width: 400px;">
+                <h3>Customer Information</h3>
+                <form id="checkout-form" style="display: flex; flex-direction: column; gap: 16px;">
+                    <fieldset style="padding: 16px; margin: 0;">
+                        <legend>Billing Information</legend>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                            <div>
+                                <label for="billing-name" style="margin-bottom: 4px; display: block;">Full Name:</label>
+                                <input type="text" id="billing-name" name="billing-name" required style="width: 100%; margin: 0;">
+                            </div>
+                            <div>
+                                <label for="billing-email" style="margin-bottom: 4px; display: block;">Email:</label>
+                                <input type="email" id="billing-email" name="billing-email" required style="width: 100%; margin: 0;">
+                            </div>
+                            <div>
+                                <label for="billing-phone" style="margin-bottom: 4px; display: block;">Phone:</label>
+                                <input type="tel" id="billing-phone" name="billing-phone" required style="width: 100%; margin: 0;">
+                            </div>
+                            <div>
+                                <label for="billing-zip" style="margin-bottom: 4px; display: block;">ZIP Code:</label>
+                                <input type="text" id="billing-zip" name="billing-zip" pattern="[0-9]{5}" required style="width: 100%; margin: 0;">
+                            </div>
+                        </div>
+                        <div style="margin-top: 12px;">
+                            <label for="billing-address" style="margin-bottom: 4px; display: block;">Address:</label>
+                            <input type="text" id="billing-address" name="billing-address" required style="width: 100%; margin: 0;">
+                        </div>
+                        <div style="margin-top: 12px;">
+                            <label for="billing-city" style="margin-bottom: 4px; display: block;">City:</label>
+                            <input type="text" id="billing-city" name="billing-city" required style="width: 100%; margin: 0;">
+                        </div>
+                    </fieldset>
+
+                    <fieldset style="padding: 16px; margin: 0;">
+                        <legend>Shipping Information</legend>
+                        <div class="checkbox-row" style="margin-bottom: 12px;">
+                            <label for="same-address" class="checkbox-label" style="margin: 0;">
+                                <input type="checkbox" id="same-address" name="same-address">
+                                Same as billing address
+                            </label>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                            <div>
+                                <label for="shipping-name" style="margin-bottom: 4px; display: block;">Full Name:</label>
+                                <input type="text" id="shipping-name" name="shipping-name" required style="width: 100%; margin: 0;">
+                            </div>
+                            <div>
+                                <label for="shipping-zip" style="margin-bottom: 4px; display: block;">ZIP Code:</label>
+                                <input type="text" id="shipping-zip" name="shipping-zip" pattern="[0-9]{5}" required style="width: 100%; margin: 0;">
+                            </div>
+                        </div>
+                        <div style="margin-top: 12px;">
+                            <label for="shipping-address" style="margin-bottom: 4px; display: block;">Address:</label>
+                            <input type="text" id="shipping-address" name="shipping-address" required style="width: 100%; margin: 0;">
+                        </div>
+                        <div style="margin-top: 12px;">
+                            <label for="shipping-city" style="margin-bottom: 4px; display: block;">City:</label>
+                            <input type="text" id="shipping-city" name="shipping-city" required style="width: 100%; margin: 0;">
+                        </div>
+                    </fieldset>
+
+                    <div id="validation-errors" style="margin: 0;"></div>
+
+                    <input type="submit" value="Complete Order" style="align-self: flex-start;">
+                </form>
+            </div>
+        </div>
+
+        <div id="order-verification" style="display: none;">
+            <h3>Order Verification</h3>
+            <div id="verification-content"></div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
